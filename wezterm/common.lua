@@ -56,12 +56,6 @@ config.keys = {
     },
 }
 
---config.keys = {
---    { mods = 'CMD', key = '[', action = act.SendKey { mods = 'ALT', key = '[', } },
---    { mods = 'CMD', key = '1', action = act.SendKey { mods = 'ALT', key = '1', } },
---    { mods = 'LEADER', key = '1', action = act.ActivateTab(0) }
---}
-
 --config.leader = { key = 'Escape', timeout_milliseconds = 1000 }
 --config.keys = {
 --    { mods = 'LEADER', key = '1', action = act.ActivateTab(0) },
