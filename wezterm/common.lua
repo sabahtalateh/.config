@@ -9,7 +9,7 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
-config.front_end = "OpenGL"
+config.front_end = 'OpenGL'
 
 config.initial_rows = 40
 config.initial_cols = 150
@@ -33,14 +33,26 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_max_width = 20
 config.window_frame = { font = font, font_size = font_size - 1 }
 
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_decorations = 'INTEGRATED_BUTTONS|RESIZE'
 config.window_padding = { left = 0, right = 0, top = '0.25cell', bottom = 0 }
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 15
 
 config.keys = {
     -- Cmd + R: Clear screen
     { key = 'r', mods = 'CMD', action = act.ClearScrollback('ScrollbackAndViewport') },
+    {
+        mods = 'CMD|ALT',
+        key = 't',
+        action = act.PromptInputLine({
+            description = 'Enter new name for tab',
+            action = wezterm.action_callback(function(window, pane, line)
+                if line then
+                    window:active_tab():set_title(line)
+                end
+            end),
+        }),
+    },
 }
 
 --config.keys = {

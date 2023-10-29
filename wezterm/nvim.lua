@@ -1,6 +1,6 @@
 local config = require('common')
 
-config.color_scheme = '3024 Day'
+config.color_scheme = 'Spring'
 
 config.window_decorations = 'RESIZE'
 config.window_background_opacity = 1.0
