@@ -39,8 +39,9 @@ config.window_background_opacity = 0.85
 config.macos_window_background_blur = 15
 
 config.keys = {
-    -- Cmd + R: Clear screen
+    -- <Cmd + r>: Clear screen
     { key = 'r', mods = 'CMD', action = act.ClearScrollback('ScrollbackAndViewport') },
+    -- <Cmd + Alt + t>: Rename tab
     {
         mods = 'CMD|ALT',
         key = 't',
