@@ -32,15 +32,6 @@ config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_max_width = 20
 config.window_frame = { font = font, font_size = font_size - 1 }
---config.colors = { tab_bar = {
---    background = '#eae5e3',
---    inactive_tab_edge = '#ddd7d5',
---    active_tab = { bg_color = '#f6f1ed', fg_color = '#433e3d', intensity = 'Normal', underline = 'Single', italic = false, strikethrough = false, },
---    inactive_tab = { bg_color = '#eae5e3', fg_color = '#5e5756', },
---    inactive_tab_hover = { bg_color = '#f6f1ed', fg_color = '#46413f', italic = true, },
---    new_tab = { bg_color = '#faf4f3', fg_color = '#5e5756', },
---    new_tab_hover = { bg_color = '#ece7e5', fg_color = '#5e5756', italic = true, },
---} }
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_padding = { left = 0, right = 0, top = '0.25cell', bottom = 0 }
