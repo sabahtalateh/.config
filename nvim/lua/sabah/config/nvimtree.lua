@@ -16,7 +16,7 @@ end
 -- otherwise open
 local my_toggle = function(api)
     return function()
-        is_focused = (vim.api.nvim_buf_get_option(0, "filetype") == "NvimTree")
+        local is_focused = (vim.api.nvim_buf_get_option(0, "filetype") == "NvimTree")
         if is_focused then
             api.tree.close()
         else
@@ -45,7 +45,7 @@ function M.setup()
     }
 
     local api = require("nvim-tree.api")
-    vim.api.nvim_create_user_command("NvimTreeMyToggle", my_toggle(api), { nargs = "*" })
+    vim.keymap.set("n", "<M-1>", my_toggle(api), default_opts)
 end
 
 return M

@@ -1,4 +1,6 @@
 local config = require('common')
+local wezterm = require('wezterm')
+local act = wezterm.action
 
 config.color_scheme = 'Spring'
 
@@ -17,5 +19,8 @@ config.colors = {
         new_tab_hover = { bg_color = '#fdf8f4', fg_color = '#494441' },
     }
 }
+
+table.insert(config.keys, { mods = 'CMD', key = '1', action = act.SendKey { mods = 'ALT', key = '1', } })
+table.insert(config.keys, { mods = 'CMD', key = '/', action = act.SendKey { mods = 'ALT', key = '/', } })
 
 return config

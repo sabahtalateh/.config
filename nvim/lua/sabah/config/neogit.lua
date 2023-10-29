@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup()
-    neogit = require("neogit")
+    local neogit = require("neogit")
     neogit.setup({})
 end
 
