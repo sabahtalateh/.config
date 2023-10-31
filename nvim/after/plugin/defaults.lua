@@ -22,7 +22,7 @@ opt.updatetime = 250 --Decrease update time
 opt.signcolumn = "yes" -- Always show sign column
 opt.clipboard = "unnamedplus" -- Access system clipboard
 vim.opt.autochdir = true -- chdir to opened file dir
---vim.opt.cmdheight = 0
+vim.opt.cmdheight = 5
 
 -- Highlight on yank
 vim.cmd [[
